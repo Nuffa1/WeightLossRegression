@@ -67,7 +67,7 @@ custom_data = pd.DataFrame([{
     'Sleep Quality',
     ('Poor', 'Good', 'Fair', 'Excellent')),
     'Stress Level': st.number_input("Stress Level (1-10)", min_value=1, max_value=10, step=1),
-    'Weekly Calorie Balance': (st.number_input("Daily Caloric Surplus/Deficit")) * 7   # Example calculation
+    'Duration (weeks)': (st.number_input("Duration (weeks)"))  # Example calculation
 }])
 
 # Predict final weight using the trained pipeline
