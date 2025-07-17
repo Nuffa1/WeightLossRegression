@@ -10,6 +10,7 @@ from sklearn.metrics import mean_squared_error
 from xgboost import XGBRegressor
 from sklearn.linear_model import Ridge
 
+st.title("Predicting Weight Change Using Regression - Nyel Uffa")
 # Load your dataset and define features and target variable
 df = pd.read_csv("weight_change_dataset.csv")
 # feature engineering for strong signal
