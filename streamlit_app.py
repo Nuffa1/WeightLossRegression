@@ -60,8 +60,12 @@ custom_data = pd.DataFrame([{
     'Current Weight (lbs)': st.number_input("Current Weight (lbs)"),
     'BMR (Calories)': st.number_input("BMR (Calories)"),
     'Daily Calories Consumed': st.number_input("Daily Calories Consumed"),
-    'Physical Activity Level': 'Moderately Active',
-    'Sleep Quality': 'Good',
+    'Physical Activity Level': st.selectbox(
+    'Phyiscal Activity Level',
+    ('Sedentary', 'Lightly Active', 'Moderately Active', 'Very Active')),
+    'Sleep Quality': st.selectbox(
+    'Sleep Quality',
+    ('Poor', 'Good', 'Fair', 'Excellent')),
     'Stress Level': st.number_input("Stress Level (1-10)", min_value=1, max_value=10, step=1),
     'Weekly Calorie Balance': (st.number_input("Daily Caloric Surplus/Deficit")) * 7   # Example calculation
 }])
