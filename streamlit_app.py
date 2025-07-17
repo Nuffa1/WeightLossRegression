@@ -15,7 +15,7 @@ st.title("Predicting Weight Change Using Regression - Nyel Uffa")
 df = pd.read_csv("weight_change_dataset.csv")
 # feature engineering for strong signal
 df['Weekly Calorie Balance'] = df['Daily Caloric Surplus/Deficit'] * df['Duration (weeks)']
-df = df.drop(columns=['Daily Caloric Surplus/Deficit', 'Duration (weeks)'])
+df = df.drop(columns=['Daily Caloric Surplus/Deficit'])
 # Drop specific columns that are not needed for regression
 X = df.drop(columns=["Final Weight (lbs)"])
 y = df["Final Weight (lbs)"]
